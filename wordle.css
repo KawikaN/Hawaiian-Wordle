@@ -21,27 +21,26 @@ hr {
 
     /*width: -10px 100%; /* sets the width of the line on the screen to 100% of the width of the screen */
     height: 30px;
-    background-color: black;
+    background-color: black; /* bar color */
     margin: 0;
     
 }
 
 #title { /* Worlde */
     
-    font-size: 80px; /* Note that pt and px are dfferent units */
+    font-size: 400%; /* Note that pt and px are dfferent units */
     font-weight: bold;
-    letter-spacing: 20px; /* Spacing between letters */
-    
-    
+    letter-spacing: 25px; /* Spacing between letters */
+
 }
 
 #board { /* board we will play on */
 
-    width: 25%; /* creates the x axis of our board (the tiles will fill as much as it can within this board) */
-    height: 39%; /* creates the y axis for our board */
+    width: 80%; /* creates the x axis of our board (the tiles will fill as much as it can within this board) */
+    height: 50%; /* creates the y axis for our board */
     /*background-color: green; */
-    margin: 0 auto; /* centers the board */
-    margin-top: 3%; /* how far away from the top */
+    margin: auto; /* centers the board */
+    margin-top: 0; /* how far away from the top */
     display: flex; /* puts the boxes ina  square instead of a colum */
     flex-wrap: wrap;
 
@@ -50,9 +49,9 @@ hr {
 .tile {
     /* Box */
     border: 2px solid lightgray;
-    width: 60px;
-    height: 60px;
-    margin: 2.5px;
+    width: 18%; /* 18% */
+    height: 60px;/* 60px */
+    margin: 2px;/* 2.5px */ /*area between each tile*/
 
     /* Text */
     color: black;
@@ -83,7 +82,7 @@ hr {
 }
 
 .keyboard-row {
-    width: 400px;
+    width: 400px; /* 400px */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -94,10 +93,10 @@ hr {
 
 
 .key-tile {
-    width: 60px;
-    height: 45px;
-    margin: 1px;
-    border: 1px solid lightgray;
+    width: 70px; /* 60px */
+    height: 45px; /* 45px */
+    margin: 2px;
+    border: 2px solid lightgray;
 
     /* Text */
     font-size: 20px;
