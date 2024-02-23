@@ -5,11 +5,28 @@ var width = 5; // length of word (x-axis of our square of boxes)
 var row = 0; // current guess (attempt number)
 var col = 0; // current letter for that attempt
 
+
+
+
+
 var gameOver = false;
-//var word = "SQUID";
+
+
+function game(){
+    console.log("Game Over - redirecting to definnition page");
+    window.location.href = '/answer';
+}
+
+
+
+
 
 // wordsc = ["Squid", "Hello"];
 // word = words[0]
+function myFunc(vars) {
+    return vars
+}
+
 
 var guessList = [
     'ʻōweo',
@@ -1536,12 +1553,18 @@ var guessList = [
     'kenia',
     "noiʻi"
   ]
+
+
   //var wordList = ["aloha", "kaena"]
   var wordList = ["aliʻi", 'akula', 'lākou', 'ʻāina', 'ihola', 'maila', 'ʻoiai', 'aʻela', 'hōʻea', 'laila', 'kākou', 'haole', 'maoli', 'waena', 'loaʻa', 'aloha', 'oʻahu', 'ʻōpio', 'keiki', 'ʻelua', 'makua', 'waiho', 'heiau', 'kākau', 'kahua', 'lāʻau', 'moana', 'kōkua', 'nīnau', 'hānai', 'mākou', 'kāhea', 'keʻei', 'hānau', 'lāhui', 'ukali', 'puaʻa', 'wāwae', 'kiaʻi', 'hahai', 'mākua', 'nunui', 'ʻīkoi', 'ʻākau', 'māhoe', 'niuhi', 'makoa', 'kaula', 'mōhai', 'hāpai', 'penei', 'ʻāhia', 'lālau', 'ʻeleu', 'mālie', 'keawe', 'ʻolua', 'honua', 'kālua', 'mauna', 'māwae', 'pehea', 'lehua', 'kūʻai', 'uhaʻi', 'mauʻu', 'lehia', 'kāula', 'awāwa', 'ʻeono', 'kālai', 'hauna', 'paukū', 'poina', 'ʻauʻa', 'moena', 'mamao', 'ʻuala', 'maliu', 'kaihe', 'hekau', 'meheu', 'launa', 'ʻōuli', 'kaupō', 'kūlou', 'waele', 'kukui', 'ʻoulu', 'ukana', 'pauka', 'naʻau', 'ʻōniu', 'loloa', 'ʻīlio', 'hōʻeu', 'nanea', 'nonoi', 'noiʻi', 'maika', 'koena', 'pālau', 'laulā', 'kaʻao', 'hālau', 'uhaki', 'wauke', 'okōko', 'kāuna', 'maiʻa', 'hahau', 'ʻāhiu', 'kiola', 'ʻōiwi', 'uhuki', 'kiʻei', 'anana', 'ʻehia', 'huina', 'kaena', 'pūniu', 'kuapā', 'ʻeiwa', 'pāhoa', 'hōʻoi', 'ʻaina', 'kīhei', 'hāmau', 'mākia', 'heana', 'unuhi', 'kūhiō', 'niniu', 'nāihe', 'kainō', 'kuemi', 'ʻāhua', 'līloa', 'hākau', 'ʻanae', 'pouli', 'kinai', 'loina', 'olonā', 'huila', 'kaiao', 'akāka', 'mōlia', 'maile', 'kāmoe', 'hoʻāo', 'kunou', 'pōniu', 'wahie', 'luaʻi', 'kēhau', 'ʻūlei', 'ʻiako', 'hiolo', 'hihia', 'akena', 'hāʻao', 'hāiki', 'kūlia', 'ʻonou', 'hāuna', 'makau', 'ʻōpua', 'ʻikuā', 'ʻōnou', 'puaʻi', 'houpo', 'luahi', 'ʻoaka', 'luina', 'naele', 'kūlua', 'nākai', 'iulai', 'aumoe', 'manuā', 'maunu', 'haupa', 'lānai', 'puehu', 'pōʻai', 'ʻāoʻo', 'haele', 'nanao', 'pōhue', 'hoana', 'kāohi', 'holoi', 'pālua', 'heulu', 'kāʻeo', 'hokua', 'kāpae', 'ʻaeʻa', 'kaona', 'kuʻia', 'ʻalae', 'laukī', 'kākia', 'ʻēheu', 'kāmau', 'ōlaʻi', 'hōʻoā', 'kaʻau', 'uwaʻu', 'pauoa', 'kuili', 'paʻao', 'nīʻau', 'uianu', 'pīkai', 'ulele', 'kuene', 'paila', 'kāoʻo', 'uhalu', 'hāloa', 'kīlou', 'ʻiewe', 'kupua', 'kuehu', 'kalae', 'līwai', 'haili', 'puana', 'ulana', 'haoʻa', 'ʻāhui', 'hahae', 'keanu', 'kuala', 'lupea', 'maiau', 'ʻōmea', 'kaʻeo', 'ikīki', 'ʻaila', 'kēwai', 'keoho', 'mālia', 'ʻāpua', 'puakō', 'hāmoa', 'lēhau', 'neʻeu', 'kuana', 'mulea', 'ʻoāwa', 'ʻumia', 'kawai', 'ʻōhua', 'ʻōmau', 'pahua', 'huhui', 'paina', 'mahae', 'huelo', 'lāʻie', 'kēpau', 'kūoʻo', 'kuewa', 'nahae', 'ʻīnea', 'pōlua', 'kualā', 'pīkoi', 'keaka', 'pāʻia', 'kaohi', 'lāuli']
   guessList = guessList.concat(wordList); // adds our wordList to the guessList
 
-  var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase(); // gets a random number between 0-1 and then sets it to a real number not decimal
+
+  //word = "aloha";
+  //var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase(); // gets a random number between 0-1 and then sets it to a real number not decimal
   console.log(word); // prints word in console
+
+
 
 window.onload = function(){ 
     initialize();
@@ -1583,7 +1606,7 @@ for(let i = 0; i < keyboard.length; i++) {
             keyTile.id = "Backspace";
 
         }
-        else if ("A" <= key && key <= "Z") {
+        else if ("A" <= key && key <= "ʻ") {
             keyTile.id = "Key" + key; // "key" + "A"
         }
         keyTile.addEventListener("click", processKey);
@@ -1612,33 +1635,40 @@ function processKey() {
 
 
 function processInput(e) {
-    if(gameOver) return; // dont want to process keys if the game is finished
-        if("KeyA" <= e.code && e.code <= "KeyZ") { // if it is in the range of the lexico order A-Z
-            if(col < width){ // If they are not outside of the square
-                let currTile = document.getElementById(row.toString() + "-" + col.toString());
-                if(currTile.innerText == "") { // checks if the til is empty 
-                    currTile.innerText = e.code[3]; // index 3 is just the letter "KeyA" index 3 is "A"
-                    col += 1;
-                }
-            }
-        }else if(e.code == "Backspace"){
-            if(0 < col && col <= width) { // if they are on any tile in the range other than 0 (cant go back if you are on zero)
-                col -=1;
-            }
+    if(gameOver) {
+        game();
+        return; // dont want to process keys if the game is finished
+    }
+    console.log(e["code"]);
+    if("KeyA" <= e.code && e.code <= "Keyʻ") { // if it is in the range of the lexico order A-Z
+        /* != "Enter" && e.code != "Backspace" */
+
+        if(col < width){ // If they are not outside of the square
             let currTile = document.getElementById(row.toString() + "-" + col.toString());
-            currTile.innerText = ""; // set the text in the square to nothing 
+            if(currTile.innerText == "") { // checks if the til is empty 
+                currTile.innerText = e.code[3]; // index 3 is just the letter "KeyA" index 3 is "A"
+                col += 1;
+            }
         }
-
-        else if (e.code == "Enter") {
-            update();
-
+    }else if(e.code == "Backspace"){
+        if(0 < col && col <= width) { // if they are on any tile in the range other than 0 (cant go back if you are on zero)
+            col -=1;
         }
+        let currTile = document.getElementById(row.toString() + "-" + col.toString());
+        currTile.innerText = ""; // set the text in the square to nothing 
+    }
 
-        if(!gameOver && row == height) {
-            gameOver = true;
-            document.getElementById("answer").innerText = word;
+    else if (e.code == "Enter") {
+        update();
 
-        }
+    }
+
+    if(!gameOver && row == height) {
+        gameOver = true;
+        document.getElementById("answer").innerText = word;
+        game();
+
+    }
 }
 
 
@@ -1688,6 +1718,7 @@ function update(){
         } 
         if (correct == width) {
             gameOver = true;
+            game();
         }
     }
 
@@ -1715,10 +1746,13 @@ function update(){
     }
 }
 
-function gameOver() { // when the game ends print an game over screen with information about thier game and me
 
-}
+
+
+
 
 row += 1; // starts a new row
 col = 0; // starts at the first colum of the new row
 }
+
+
