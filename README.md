@@ -1,4 +1,7 @@
 # Hawaiian-Wordle-Clone
+
+Deployment: https://hawaiian-wordle.onrender.com/
+
 Wordle for those who intend to learn more Hawaiian. It also has my own additions to it that doesn't make it identical to NYT's infamous wordle.
 
 There is a second page after your game end(win or loose) which you can learn more about the selected word
